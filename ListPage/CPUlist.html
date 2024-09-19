@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parts List</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+<header>
+    <h1>PCBuildr</h1>
+</header>
+
+<main>
+    <h1>CPU List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Form Factor</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</main>
+
+<script>
+    const tableBody = document.querySelector('tbody');
+    for (let i = 1; i <= 25; i++) {
+        const row = `<tr>
+                        <td>Item ${i}</td>
+                        <td>Category ${i % 2 === 0 ? 'B' : 'A'}</td>
+                        <td>Description for item ${i}.</td>
+                     </tr>`;
+        tableBody.innerHTML += row;
+    }
+</script>
+
+</body>
+</html>
