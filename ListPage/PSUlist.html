@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parts List - GPU</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn" id="dropdownButton" aria-haspopup="true" aria-expanded="false">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="dropdown-content" id="dropdownContent">
+                 <a href="home.html">Home Page</a>
+                <a href="build.html">Build Page</a>
+                <a href="CPUlist.html">CPU</a>
+                <a href="GPUlist.html">GPU</a>
+                <a href="PSUlist.html">PSU</a>
+                <a href="CaseList.html">Case</a>
+                <a href="CPUCool.html">Cooler</a>
+                <a href="RAMlist.html">Memory</a>
+                <a href="StorageList.html">Storage</a>
+
+            </div>
+        </div>
+        <h1>PCBuildr</h1>
+    </header>
+
+    <main>
+        <h1>Power Supplies</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Form Factor</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        // Populate the table with sample data
+        const tableBody = document.querySelector('tbody');
+        for (let i = 1; i <= 25; i++) {
+            const row = `<tr>
+                            <td>Item ${i}</td>
+                            <td>Category ${i % 2 === 0 ? 'B' : 'A'}</td>
+                            <td>Description for item ${i}.</td>
+                         </tr>`;
+            tableBody.innerHTML += row;
+        }
+
+        // Dropdown functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownButton = document.getElementById('dropdownButton');
+            const dropdownContent = document.getElementById('dropdownContent');
+
+            // Toggle dropdown on button click
+            dropdownButton.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent event from bubbling up
+                dropdownContent.classList.toggle('show');
+                
+                // Update ARIA attribute for accessibility
+                const isExpanded = dropdownContent.classList.contains('show');
+                dropdownButton.setAttribute('aria-expanded', isExpanded);
+            });
+
+            // Close dropdown if clicked outside
+            window.addEventListener('click', function() {
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                    dropdownButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

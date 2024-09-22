@@ -1,0 +1,145 @@
+/* Reset and Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #001f3f; /* Dark Blue */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative; /* For positioning dropdown */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2rem;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+/* Dropdown Button (Hamburger) */
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px; 
+    height: 18px; 
+}
+
+.hamburger span {
+    display: block;
+    height: 3px; 
+    background: white; 
+    border-radius: 2px;
+    transition: all 0.3s ease; 
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px; /* Adjust based on button height */
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show Dropdown Content when .show class is added */
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+th, td {
+    border: 1px solid #ddd; /* Border for table cells */
+    padding: 8px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    background-color: #f2f2f2; /* Background color for table headers */
+    color: #333; /* Text color for headers */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .dropdown {
+        left: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .hamburger {
+        width: 20px; 
+        height: 14px; 
+    }
+
+    .dropdown-content {
+        min-width: 140px;
+    }
+}
