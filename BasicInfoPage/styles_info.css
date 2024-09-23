@@ -1,0 +1,130 @@
+/* Existing styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #001f3f;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #001f3f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-label {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    width: 800px;
+}
+
+.faq-checkbox {
+    display: none;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #f1f1f1;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.faq-checkbox:checked + .faq-label + .faq-answer {
+    max-height: 400px;
+    padding: 10px;
+}
+
+.image-container {
+    max-width: 600px;
+    margin: 0 auto 30px auto; /* Centers the images and adds space below */
+    display: flex;
+    justify-content: space-between; /* Ensures equal space between the images */
+}
+
+.image-container img {
+    width: 30%; /* Each image will take up 30% of the container width */
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #f8f8f8;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+}
+
+.large-header {
+    font-size: 32px; /* Adjust size for bigger text */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers the header text */
+    margin-bottom: 20px; /* Adds space below the header */
+}
+
+.image-footer {
+    font-size: 12px; /* Adjust size for bigger text */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers the header text */
+    margin-bottom: 40px; /* Adds space below the header */
+}
